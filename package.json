@@ -10,8 +10,7 @@
     "url": "git@github.com:bestguy/generate-maze.git"
   },
   "scripts": {
-    "prepublish": "node node_modules/webpack/bin/webpack.js -p",
-    "pretest": "node node_modules/webpack/bin/webpack.js",
+    "pretest": "node node_modules/webpack/bin/webpack.js -p",
     "test": "node_modules/mocha/bin/mocha"
   },
   "devDependencies": {
