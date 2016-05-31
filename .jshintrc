@@ -1,0 +1,20 @@
+{
+  "node": true,
+  "browser": true,
+  "bitwise": true,
+  "devel": false,
+  "eqeqeq": false,
+  "forin": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "nomen": false,
+  "sub": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "asi": true
+}
