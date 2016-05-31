@@ -3,7 +3,26 @@
 Maze generator using a JavaScript implementation of Eller's Algorithm, 
 as described here: http://www.neocomputer.org/projects/eller.html
 
-This algorithm creates 'perfect' mazes, which have only a single path between any two cells.
+This algorithm creates 'perfect' mazes, which guarantees a single path 
+between any two cells, such as:
+
+    +---+---+---+---+---+---+---+
+    |           |           |   |
+    +---+   +---+   +   +   +   +
+    |   |   |       |   |       |
+    +   +   +   +   +   +   +   +
+    |       |   |   |   |   |   |
+    +   +---+   +   +---+---+   +
+    |   |   |   |   |   |   |   |
+    +   +   +   +   +   +   +   +
+    |   |       |   |   |       |
+    +   +---+   +---+   +---+---+
+    |   |   |   |       |       |
+    +   +   +   +   +---+   +   +
+    |                       |   |
+    +---+---+---+---+---+---+---+
+
+*Note: This libary does not create ASCII-art or other text visualizations.  That part is up to you.*
 
 This maze library generates a two-dimensional array of cells, each with the following properties:
 
@@ -40,6 +59,8 @@ var maze = generator(8, 4);
 var maze = generator(8, 4, false);
 
 ```
+
+
 
 _Note: the maze is an array of rows, so to access individual cells by their x/y
 positions, you need to specify the row first.  For example:
