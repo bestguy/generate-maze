@@ -23,7 +23,11 @@ This maze library generates a two-dimensional array of cells, each with the foll
 
 _Example assumes you are using a module system such as node, Webpack or Browserify._
 
-```js
+`npm install generate-maze`
+
+----
+
+```javascript
 var generator = require('generate-maze');
 
 // Width and height == 4
