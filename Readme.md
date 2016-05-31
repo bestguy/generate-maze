@@ -19,13 +19,13 @@ This maze library generates a two-dimensional array of cells, each with the foll
     }
 ```
 
-## Usage
-
-_Example assumes you are using a module system such as node, Webpack or Browserify._
+## Installation
 
 `npm install generate-maze`
 
-----
+## Usage
+
+_Example assumes you are using a module system such as node, Webpack or Browserify._
 
 ```javascript
 var generator = require('generate-maze');
