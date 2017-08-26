@@ -15,6 +15,8 @@
   },
   "scripts": {
     "dist": "node node_modules/webpack/bin/webpack.js -p",
+    "prepublish": "npm run dist",
+    "postpublish": "git push && git push --tags",
     "test": "mocha --compilers js:babel-register --recursive"
   },
   "devDependencies": {
