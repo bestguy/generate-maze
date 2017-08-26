@@ -1,7 +1,7 @@
 'use strict';
-let assert = require('assert');
+import assert from 'assert';
 
-let maze = require('../dist/generate-maze.js');
+import maze from '../src/generate-maze.js';
 
 describe('maze', () => {
   it('should have correct width and height with single parameter', () => {
