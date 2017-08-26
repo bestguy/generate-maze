@@ -1,17 +1,19 @@
-'use strict';
-let webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
+  devtool: 'source-map',
   entry: `./src/cjs-wrapper.js`,
   output: {
-    path: `./dist/`,
+    path: path.resolve(__dirname, './dist'),
     filename: 'generate-maze.js',
+    library: 'generateMaze',
     libraryTarget: 'umd'
   },
   module: {
     loaders: [
       {
-        test: /\.(es6|js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {

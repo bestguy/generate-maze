@@ -22,18 +22,19 @@ between any two cells, such as:
     |                       |   |
     +---+---+---+---+---+---+---+
 
-*Note: This libary does not create ASCII-art or other text visualizations.  That part is up to you.*
+**Note: This library does not create ASCII-art or other text visualizations.  
+That part is up to you.**
 
-This maze library generates a two-dimensional array of cells, each with the following properties:
+This library generates a two-dimensional array of maze cells, each with the following properties:
 
 ``` js
     {
       x: 4,          // Horizontal position, integer
       y: 7,          // Vertical position, integer
-      top: false,    // Top/Up has a wall/blocked, boolean 
-      left: false,   // Left has a wall/blocked, boolean
-      bottom: true,  // Bottom/Down has a wall/blocked, boolean
-      right: true,   // Right has a wall/blocked, boolean
+      top: false,    // Top/Up has a wall/blocked if true, boolean 
+      left: false,   // Left has a wall/blocked if true, boolean
+      bottom: true,  // Bottom/Down has a wall/blocked if true, boolean
+      right: true,   // Right has a wall/blocked if true, boolean
       set: 5         // Set # used to generate maze, can be ignored
     }
 ```
