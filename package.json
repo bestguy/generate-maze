@@ -2,26 +2,39 @@
   "name": "generate-maze",
   "version": "0.1.0",
   "main": "dist/generate-maze.js",
-  "files": ["dist"],
-  "keywords": ["maze"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "maze"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:bestguy/generate-maze.git"
   },
   "scripts": {
-    "pretest": "node node_modules/webpack/bin/webpack.js -p",
-    "test": "node_modules/mocha/bin/mocha"
+    "dist": "node node_modules/webpack/bin/webpack.js -p",
+    "test": "mocha --compilers js:babel-register --recursive"
   },
   "devDependencies": {
     "assert": "^1.4.0",
-    "babel-core": "^6.9.0",
-    "babel-loader": "^6.2.4",
-    "babel-polyfill": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-2": "^6.5.0",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.13.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "express": "^4.14.0",
+    "fecha": "^2.3.1",
     "lodash": "^4.13.1",
     "mocha": "^2.5.3",
-    "webpack": "^2.1.0-beta.7"
+    "webpack": "^2.7.0"
   }
 }
