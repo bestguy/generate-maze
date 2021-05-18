@@ -21,6 +21,12 @@ describe('maze', () => {
     assert.deepStrictEqual(m, m2, 'Mazes do not match');
   });
 
+  it('should output different maze for different seed', () => {
+    let m = maze(4, 4, true, 222222);
+    let m2 = maze(4, 4, true, 123456);
+    assert.notDeepStrictEqual(m, m2, 'Mazes match');
+  });
+
   it('should be closed by default', () => {
     let m = maze(5);
     for (var i = 0; i < 5; i++) {

@@ -63,15 +63,6 @@ function mergeSetWith(row, oldSet, newSet) {
   });
 }
 
-function populateMissingSets2(row, random) {
-  const setsInUse = compact(uniq(row.map(row => row.set)));
-  const allSets = range(1, row.length + 1);
-  const availableSets = difference(allSets, setsInUse).sort(() => 0.5 - random());
-  row.forEach((box, i) => {
-    if (!box.set) box.set = availableSets[i];
-  });
-}
-
 function populateMissingSets(row, random) {
   const setsInUse = compact(uniq(row.map(row => row.set)));
   const allSets = range(1, row.length + 1);
