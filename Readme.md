@@ -21,6 +21,8 @@ between any two cells, such as:
     +   +   +   +   +---+   +   +
     |                       |   |
     +---+---+---+---+---+---+---+
+    
+Another [Web example](https://svelte.dev/repl/7eb34401ec0c42d3bb47d2cdbc58f926?version=3.38.2)
 
 **Note: This library does not create ASCII-art or other text visualizations.  
 That part is up to you.**
