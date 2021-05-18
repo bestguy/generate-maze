@@ -14,7 +14,7 @@
     "url": "git@github.com:bestguy/generate-maze.git"
   },
   "scripts": {
-    "dist": "webpack -p",
+    "dist": "webpack",
     "prepublish": "npm run dist",
     "postpublish": "git push && git push --tags",
     "test": "jest"
