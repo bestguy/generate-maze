@@ -1,9 +1,12 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
   entry: `./src/cjs-wrapper.js`,
+  mode: 'production',
+  optimization: {
+    minimize: true
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'generate-maze.js',
@@ -11,15 +14,13 @@ module.exports = {
     libraryTarget: 'umd'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.[jt]s$/,
         loader: 'babel-loader',
-        query: {
-          cacheDirectory: true,
-          presets: ['es2015', 'stage-2']
-        }}
+        exclude: /node_modules/,
+        include: __dirname
+      }
     ]
   }
 };
