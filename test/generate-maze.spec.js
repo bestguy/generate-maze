@@ -6,13 +6,19 @@ import maze from '../src/generate-maze.js';
 describe('maze', () => {
   it('should have correct width and height with single parameter', () => {
     let m = maze(4);
-    assert.equal(4, m.length, 'height is incorrect');
-    assert.equal(4, m[0].length, 'width is incorrect');
+    assert.strictEqual(4, m.length, 'height is incorrect');
+    assert.strictEqual(4, m[0].length, 'width is incorrect');
   });
   it('should have correct width and height with two parameters', () => {
     let m = maze(8, 6);
-    assert.equal(6, m.length, 'height is incorrect');
-    assert.equal(8, m[0].length, 'width is incorrect');
+    assert.strictEqual(6, m.length, 'height is incorrect');
+    assert.strictEqual(8, m[0].length, 'width is incorrect');
+  });
+
+  it('should output same maze for same seed', () => {
+    let m = maze(14, 14, true, 123456);
+    let m2 = maze(14, 14, true, 123456);
+    assert.deepStrictEqual(m, m2, 'Mazes do not match');
   });
 
   it('should be closed by default', () => {

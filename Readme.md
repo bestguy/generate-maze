@@ -48,16 +48,19 @@ This library generates a two-dimensional array of maze cells, each with the foll
 _Example assumes you are using a module system such as node, Webpack or Browserify._
 
 ```javascript
-var generator = require('generate-maze');
+const generator = require('generate-maze');
 
 // Width and height == 4
-var maze = generator(4);
+const maze = generator(4);
 
 // Width == 8, height == 4
-var maze = generator(8, 4);
+const maze = generator(8, 4);
 
 // Width == 8, height == 4, maze edges are open
-var maze = generator(8, 4, false);
+const maze = generator(8, 4, false);
+
+// Width == 8, height == 4, maze edges are closed, using random seed 
+const maze = generator(8, 4, true, 123456);
 
 ```
 
