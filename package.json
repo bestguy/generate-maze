@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dist": "webpack",
-    "prepublish": "npm run dist",
+    "version": "npm run dist",
     "postpublish": "git push && git push --tags",
     "test": "jest"
   },
