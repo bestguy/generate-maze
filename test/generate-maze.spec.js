@@ -1,7 +1,7 @@
 'use strict';
 import assert from 'assert';
 
-import maze from '../src/generate-maze.js';
+import maze from '../src/generate-maze.ts';
 
 describe('maze', () => {
   it('should have correct width and height with single parameter', () => {
