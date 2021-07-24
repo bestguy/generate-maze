@@ -1,6 +1,6 @@
 {
   "name": "generate-maze",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "type": "module",
   "main": "./dist/generate-maze.cjs",
   "source": "./src/generate-maze.ts",
