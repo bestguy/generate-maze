@@ -1,7 +1,17 @@
 {
   "name": "generate-maze",
   "version": "1.0.2",
-  "main": "dist/generate-maze.js",
+  "type": "module",
+  "main": "./dist/generate-maze.cjs",
+  "source": "./src/generate-maze.ts",
+  "module": "./dist/generate-maze.module.js",
+  "unpkg": "./dist/generate-maze.umd.js",
+  "umd:main": "./dist/generate-maze.umd.js",
+  "exports": {
+    "require": "./dist/generate-maze.cjs",
+    "default": "./dist/generate-maze.modern.js"
+  },
+  "types": "./dist/generate-maze.d.ts",
   "files": [
     "dist"
   ],
@@ -14,23 +24,17 @@
     "url": "git@github.com:bestguy/generate-maze.git"
   },
   "scripts": {
-    "dist": "webpack",
-    "version": "npm run dist",
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "version": "npm run build",
     "postpublish": "git push && git push --tags",
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/register": "^7.12.1",
+    "@babel/preset-typescript": "^7.14.5",
     "assert": "^1.4.0",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^8.2.2",
     "eslint": "^4.3.0",
     "jest": "^26.6.3",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "microbundle": "^0.13.1"
   }
 }
