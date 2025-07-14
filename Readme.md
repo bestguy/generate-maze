@@ -64,9 +64,15 @@ const maze = generator(8, 4, false);
 // Width == 8, height == 4, maze edges are closed, using random seed 
 const maze = generator(8, 4, true, 123456);
 
+// Width == 8, height == 8, edges are open, default seed 1
+// and texture == 0.9 (very horizontal maze)
+const maze = generator(8, 8, false, 1, 0.9);
+
+// Width == 8, height == 8, edges are open, default seed 1
+// and texture == 0.1 (very vertical maze)
+const maze = generator(8, 8, false, 1, 0.1);
+
 ```
-
-
 
 _Note: the maze is an array of rows, so to access individual cells by their x/y
 positions, you need to specify the row first.  For example:
