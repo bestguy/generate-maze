@@ -112,7 +112,7 @@ function addSetExits(row: Cell[], nextRow: Cell[], random: () => number) {
   });
 }
 
-function generate(width = 8, height = width, closed = true, seed = 1) {
+function generate(width = 8, height = width, closed = true, seed = 1, texture = 0.5) {
   const random = mulberry32(seed);
   const maze = [];
   const r = range(width);
@@ -135,7 +135,7 @@ function generate(width = 8, height = width, closed = true, seed = 1) {
   // All rows except last:
   initial(maze).forEach((row, y) => { // TODO initial temp?
     populateMissingSets(row, random);
-    mergeRandomSetsIn(row, random);
+    mergeRandomSetsIn(row, random, texture);
     addSetExits(row, maze[y + 1], random);
   });
 
